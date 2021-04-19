@@ -2,26 +2,27 @@ package com.cts.model;
 
 public class Customer {
 	
-	private int cutomerId;
-	private String cutomerName;
-	private float cutomerSalary;
-	public int getCutomerId() {
-		return cutomerId;
+	private int customerId;
+	private String customerName;
+	private float customerSalary;
+	
+	public int getCustomerId() {
+		return customerId;
 	}
-	public void setCutomerId(int cutomerId) {
-		this.cutomerId = cutomerId;
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
-	public String getCutomerName() {
-		return cutomerName;
+	public String getCustomerName() {
+		return customerName;
 	}
-	public void setCutomerName(String cutomerName) {
-		this.cutomerName = cutomerName;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
-	public float getCutomerSalary() {
-		return cutomerSalary;
+	public float getCustomerSalary() {
+		return customerSalary;
 	}
-	public void setCutomerSalary(float cutomerSalary) {
-		this.cutomerSalary = cutomerSalary;
+	public void setCustomerSalary(float customerSalary) {
+		this.customerSalary = customerSalary;
 	}
 	
 	

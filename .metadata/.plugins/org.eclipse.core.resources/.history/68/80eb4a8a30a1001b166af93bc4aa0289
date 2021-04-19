@@ -13,9 +13,9 @@ public class CustomerMain {
 		
 		Customer cust= (Customer)beanFactory.getBean("cst");
 		
-		System.out.println(cust.getCustomerId());
-		System.out.println(cust.getCustomerName());
-		System.out.println(cust.getCustomerSalary());
+		System.out.println(cust.getCutomerId());
+		System.out.println(cust.getCutomerName());
+		System.out.println(cust.getCutomerSalary());
 		
 		
 	}
