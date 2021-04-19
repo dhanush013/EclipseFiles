@@ -26,13 +26,19 @@ public static void main(String[] args) {
 		
 		//beanFactory.getMessage("fruit.id", null, Locale.US);
 		
-		System.out.println(beanFactory.getMessage("fruit.id", null, Locale.FRENCH)+" "+fruits.getFruitsId());
+		System.out.println(beanFactory.getMessage("fruit.id", null, Locale.French)+" "+fruits.getFruitsId());
 		System.out.println(beanFactory.getMessage("fruit.name", null, Locale.US)+" "+fruits.getFruitsName());
 		System.out.println(beanFactory.getMessage("fruit.location", null, Locale.US)+" "+fruits.getFruitsLocation());
 		System.out.println(beanFactory.getMessage("fruit.cost", null, Locale.US)+" "+fruits.getFruitsCost());
 		
+fruits= (Fruits)beanFactory.getBean("fruit1",Fruits.class);
 		
+		//beanFactory.getMessage("fruit.id", null, Locale.US);
 		
+		System.out.println(beanFactory.getMessage("fruit.id", null, Locale.US)+" "+fruits.getFruitsId());
+		System.out.println(beanFactory.getMessage("fruit.name", null, Locale.US)+" "+fruits.getFruitsName());
+		System.out.println(beanFactory.getMessage("fruit.location", null, Locale.US)+" "+fruits.getFruitsLocation());
+		System.out.println(beanFactory.getMessage("fruit.cost", null, Locale.US)+" "+fruits.getFruitsCost());
 		
 	}
 
