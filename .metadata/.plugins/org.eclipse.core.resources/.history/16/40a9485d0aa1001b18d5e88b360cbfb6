@@ -35,7 +35,6 @@ public static void main(String[] args) {
 		
 		fruits= (Fruits)beanFactory.getBean("fruit1",Fruits.class);
 		
-		//for the language to change we have to create a new messages_"languagename".properties and add the translated file in it.
 		//beanFactory.getMessage("fruit.id", null, Locale.US);
 		
 		System.out.println(beanFactory.getMessage("fruit.id", null, Locale.FRENCH)+" "+fruits.getFruitsId());
