@@ -1,0 +1,47 @@
+package com.cts.model;
+
+import java.util.List;
+
+public class User {
+	
+	private int userId;
+	private String userName;
+	private String userLocation;
+	
+	private List<String> prdList;
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserLocation() {
+		return userLocation;
+	}
+
+	public void setUserLocation(String userLocation) {
+		this.userLocation = userLocation;
+	}
+
+	public List<String> getPrdList() {
+		return prdList;
+	}
+
+	public void setPrdList(List<String> prdList) {
+		this.prdList = prdList;
+	}
+	
+	
+
+}

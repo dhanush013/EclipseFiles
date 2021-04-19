@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="emp1" class="com.cts.model.Employee">
+	<property name="empId" value="1001"></property>
+	<property name="empName" value="A Kumar"></property>
+	<property name="empSalary" value="20000"></property>
+</bean>
+ 
+<bean id="bk1" class="com.cts.model.Book">
+	<constructor-arg name="isbn" value="67767"/> <!-- self closed tag can be done to any tag-->
+	<constructor-arg name="bname" value="Spring In Action"/>
+	<constructor-arg name="author" value="P Kumar"/>
+	<constructor-arg name="cost" value="2300"/>
+</bean>
+        
+</beans>

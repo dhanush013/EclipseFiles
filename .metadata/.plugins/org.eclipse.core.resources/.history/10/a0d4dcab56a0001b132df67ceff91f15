@@ -1,0 +1,71 @@
+package com.cts.pdms.util;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.StringTokenizer;
+
+import com.cts.pdms.exception.PostalDeptMgmtException;
+
+
+
+
+
+
+public class ApplicationUtil {
+
+
+	public static List<String> readFile(String inputfeed) throws PostalDeptMgmtException {
+		List <String> nscHolderList = new ArrayList <String> ();
+		
+		// TYPE YOUR CODE HERE
+		try {
+			   BufferedReader br=new BufferedReader(new FileReader(inputfeed));
+			   String s=br.readLine();
+			   while(s!=null)
+			   {
+			    String s1[]=s.split(",");
+			    Date doi=stringToDateConverter(s1[7]);
+			    if(checkIfMaturesThisMonth(doi))
+			    nscHolderList.add(s);
+			    s=br.readLine();
+			   }
+			  } catch (FileNotFoundException e) {
+			   // TODO Auto-generated catch block
+			   e.printStackTrace();
+			  }catch (IOException e) {
+			   // TODO Auto-generated catch block
+			   e.printStackTrace();
+			  }
+
+		return nscHolderList;
+	}
+	public static java.sql.Date utilToSqlDateConverter(java.util.Date utDate) {
+		java.sql.Date sqlDate = null;
+		
+		// TYPE YOUR CODE HERE
+		
+		return sqlDate;
+	}
+	
+	public static java.util.Date stringToDateConverter(String stringDate) {
+		return new Date();
+	}
+	public static boolean checkIfMaturesThisMonth(Date maturityDate)
+	{
+		// Checks if the month of maturityDate and month of currentDate are same
+		// Assumption is all NSCs mature on 30th or 31st of any month
+		
+		// TYPE YOUR CODE HERE
+		
+		return false;
+	}
+}
+

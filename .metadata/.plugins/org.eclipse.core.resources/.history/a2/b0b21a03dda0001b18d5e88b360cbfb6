@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+<bean id="user1" class="com.cts.model.User">
+	<property name="userId" value="5665661"></property>
+	<property name="userName" value="R kumar"></property>
+	<property name="userLocation" value="delhi"></property>
+	<property name="prdList">
+	<list>
+		<value>Java Book</value>
+		<value>Mobile</value>
+		<value>Laptop</value>
+		<value>Mobile</value>
+		<value>car</value>
+	</list>
+	</property>
+	<property name="cityList">
+		<set>
+			<value>ACas1</value>
+			<value>ACas3</value>
+			<value>ACas2</value>
+		</set>
+	</property>
+</bean>
+
+
+
+</beans>

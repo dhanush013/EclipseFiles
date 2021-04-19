@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+		<bean id="delivery1" class="com.cts.model.Delivery">
+		<property name="deliveryId" value="55656"></property>
+		<property name="deliveryName" value="Pizza Delivery"></property>
+		<property name="deliveryDate" value="2020-10-22"></property>
+		</bean>
+        
+
+</beans>
