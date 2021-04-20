@@ -21,14 +21,14 @@
 	<property name="prdId" value="656556"></property>
 	<property name="prdName" value="Columbus Show"></property>
 	<property name="prdCost" value="2500"></property>
-	<property name="prdOrder" ref="order1"></property>
+	<property name="prdOrder" ref=""></property>
 </bean>
 
-<bean id="order1" class="com.cts.model.ProductOrder">
-	<property name="orderId" value="1001"></property>
-	<property name="orderDate" value="04/20/2021"></property>
-	<property name="orderDeliveryDate" value="04/25/2021"></property>
-	<property name="orderLocation" value="Chennai"></property>
+<bean id="prd1" class="com.cts.model.ProductOrder">
+	<property name="orderId" value="656556"></property>
+	<property name="orderDate" value="Columbus Show"></property>
+	<property name="orderDeliveryDate" value="2500"></property>
+	<property name="orderLocation" ref=""></property>
 </bean>
         
 </beans>

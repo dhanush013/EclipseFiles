@@ -1,0 +1,9 @@
+package com.cts.model;
+
+public class Product {
+	private int prdId;
+	private int prdId;
+	private int prdId;
+	private int prdId;
+
+}
