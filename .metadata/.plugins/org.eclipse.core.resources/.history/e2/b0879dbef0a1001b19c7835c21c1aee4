@@ -1,4 +1,0 @@
-drivername=com.mysql.cj.jdbc.Driver
-url=jdbc:mysql://localhost:3306/pdms
-username=student
-password=student
