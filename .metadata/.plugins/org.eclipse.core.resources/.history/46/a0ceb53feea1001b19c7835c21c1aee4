@@ -1,0 +1,88 @@
+package com.cts.emp.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.cts.emp.dao.EmployeeDAO;
+import com.cts.emp.dto.Employee;
+import com.cts.emp.exception.EmployeeSystemAdminException;
+import com.cts.emp.util.ApplicationUtil;
+
+public class EmployeeAdminService {
+	private static final String DELIMITER = ",";
+
+	public static List<Employee> buildEmployeeList(List<String> empRecords) {
+		
+		List<Employee> employeeList = new ArrayList<>();
+		for(String line:empRecords) {
+			String[] fields = line.split(EmployeeAdminService.DELIMITER);
+			int empno = Integer.parseInt(fields[0].trim());
+			String empname = fields[1].trim();
+			String desig = fields[2].trim();
+			String emptype = fields[3].trim();
+			double curSalary = Double.parseDouble(fields[4].trim());
+			Date dob = ApplicationUtil.stringToDateConverter(fields[5].trim());
+			double hikedSalary = 0d;
+			if(hikeSalary(emptype, desig)) {
+				hikedSalary = calculateSalaryHike(emptype, desig, curSalary);
+			} else {
+				hikedSalary = curSalary;
+			}
+			Employee emp = new Employee(empno, empname, desig, emptype, hikedSalary, dob);
+			System.out.println(emp.toString());
+			employeeList.add(emp);
+		}
+		return employeeList;
+	}
+	
+	@SuppressWarnings("finally")
+	public boolean addEmployeeDetails(String inputFeed) throws EmployeeSystemAdminException {
+		List<Employee> empList = EmployeeAdminService.buildEmployeeList(ApplicationUtil.readFile(inputFeed));
+		EmployeeDAO empDaoObj = new EmployeeDAO();
+		if(empDaoObj.addEmployeeDetails(empList)) {
+			return true;
+		} else {
+			try {
+				throw new EmployeeSystemAdminException("Database Insertion Problem");
+			} finally {
+				return false;
+			}
+		}	
+	}
+	
+	public static double calculateSalaryHike(String empType, String desig, double currentSalary) {
+		double hikedSalary = 0.0;
+		hikedSalary = getSalary(empType, desig, currentSalary);
+		return hikedSalary;
+	}
+
+	public static boolean hikeSalary(String empType,String desig) {
+		if(empType.equalsIgnoreCase("F") && desig.equalsIgnoreCase("CLERK")) {
+			return true;
+		} else if(empType.equalsIgnoreCase("F") && desig.equalsIgnoreCase("MANAGER")) {
+			return true;
+		} else if(empType.equalsIgnoreCase("C") && desig.equalsIgnoreCase("CLERK")) {
+			return true;
+		} else if(empType.equalsIgnoreCase("C") && desig.equalsIgnoreCase("MANAGER")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static double getSalary(String empType, String desig, double currentSalary) {
+		if(empType.equalsIgnoreCase("F") && desig.equalsIgnoreCase("CLERK")) {
+			return currentSalary * 1.07d;
+		} else if(empType.equalsIgnoreCase("F") && desig.equalsIgnoreCase("MANAGER")) {
+			return currentSalary * 1.10d;
+		} else if(empType.equalsIgnoreCase("C") && desig.equalsIgnoreCase("CLERK")) {
+			return currentSalary * 1.03d;
+		} else if(empType.equalsIgnoreCase("C") && desig.equalsIgnoreCase("MANAGER")) {
+			return currentSalary * 1.05d;
+		} else {
+			return currentSalary;
+		}
+	}
+
+}

@@ -1,0 +1,51 @@
+//package com.cts.pdms.client;
+//
+//import java.io.FileNotFoundException;
+//import java.io.IOException;
+//import java.text.ParseException;
+//import java.util.ArrayList;
+//
+//import com.cts.pdms.exception.PostalDeptMgmtException;
+//import com.cts.pdms.model.NSCHolderDetail;
+//import com.cts.pdms.service.PostalDeptMgmtService;
+//import com.cts.pdms.util.ApplicationUtil;
+//
+//public class PostalDeptMgmt {
+//
+//	public static void main(String[] args) throws PostalDeptMgmtException, FileNotFoundException, IOException, ParseException {
+//		// TODO Auto-generated method stub
+//		PostalDeptMgmtService postService = new PostalDeptMgmtService();
+//
+//		
+//		if(postService.addNSCHolderDetails("C:\\Users\\Jiban Barman\\Desktop\\Testing\\PostalDeptMgmtSystm\\src\\inputfeed.txt")){
+//			ArrayList <NSCHolderDetail> nscHolderList=PostalDeptMgmtService.buildNSCHolderList( ApplicationUtil.readFile("C:\\Users\\Jiban Barman\\Desktop\\Testing\\PostalDeptMgmtSystm\\src\\inputfeed.txt"));
+//			for(NSCHolderDetail record:nscHolderList) {
+//			System.out.println(record.getCustomerName()+" "+record.getTotalCost()+" "+record.getInterestAccumulated()+" "+record.getTaxDeductionOnInterest()+" "+record.getNettAmtPayable());
+//		
+//			}
+//		}
+//	}
+//
+//}
+
+package com.cts.pdms.client;
+
+import com.cts.pdms.exception.PostalDeptMgmtException;
+import com.cts.pdms.service.PostalDeptMgmtService;
+
+public class PostalDeptMgmt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PostalDeptMgmtService postService = new PostalDeptMgmtService();
+
+		try {
+			postService.addNSCHolderDetails("C:\\Users\\Jiban Barman\\Desktop\\Testing\\PostalDeptMgmtSystm\\Resources\\inputfeed.txt");
+		} catch (PostalDeptMgmtException e) {
+			e.printStackTrace();
+		}
+		System.out.println("finished");
+	}
+
+}
+

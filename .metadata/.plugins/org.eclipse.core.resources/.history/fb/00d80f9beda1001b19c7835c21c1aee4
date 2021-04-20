@@ -1,0 +1,21 @@
+package com.cts.emp.main;
+
+import com.cts.emp.exception.EmployeeSystemAdminException;
+import com.cts.emp.service.EmployeeAdminService;
+
+public class MainApp {
+	public static void main(String[] args) {
+		
+		
+		String inputFeed = "inputFeed.txt";
+		EmployeeAdminService service = new EmployeeAdminService();
+		try {
+			if(service.addEmployeeDetails(inputFeed)) {
+				System.out.println("Record has been updated.");
+			}
+		} catch(EmployeeSystemAdminException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}
