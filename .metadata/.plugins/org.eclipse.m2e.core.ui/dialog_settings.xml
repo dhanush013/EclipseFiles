@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\SpringCoreApp1"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\SpringCoreApp2"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\trial"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace"/>
@@ -49,6 +50,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="121"/>
 			<item value="12"/>
 			<item value="com"/>
 			<item value="com.cts"/>
