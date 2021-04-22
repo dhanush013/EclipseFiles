@@ -36,13 +36,6 @@
 	<property name="kidsAge" value="3"></property>
 </bean>
 
-<bean id="home" class="com.cts.model.Home">
-	<property name="homeId" value="7"></property>
-	<property name="homeName" value="Happy Home"></property>
-	<property name="homeLocation" value="Delhi"></property>
-</bean>
-
-
 <context:annotation-config></context:annotation-config>       
         
 

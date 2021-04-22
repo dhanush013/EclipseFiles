@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cts.model.Kids;
-import com.cts.model.Home;
 
 public class KidsMain {
 	
@@ -17,11 +16,6 @@ public class KidsMain {
 		System.out.println(k.getKidsName());
 		System.out.println(k.getKidsAge());
 		
-		System.out.println("\nKids Home\n");
-		System.out.println(k.getHome().getHomeId());
-		System.out.println(k.getHome().getHomeName());
-		Home home=k.getHome();
-		System.out.println(home.getHomeLocation());
 	}
 
 }

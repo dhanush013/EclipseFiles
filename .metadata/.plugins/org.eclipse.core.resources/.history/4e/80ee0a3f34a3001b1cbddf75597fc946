@@ -17,7 +17,7 @@ public class KidsMain {
 		System.out.println(k.getKidsName());
 		System.out.println(k.getKidsAge());
 		
-		System.out.println("\nKids Home\n");
+		System.out.println("Kids Home");
 		System.out.println(k.getHome().getHomeId());
 		System.out.println(k.getHome().getHomeName());
 		Home home=k.getHome();
