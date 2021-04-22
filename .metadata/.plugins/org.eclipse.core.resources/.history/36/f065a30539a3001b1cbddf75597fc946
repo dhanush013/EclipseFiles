@@ -1,7 +1,5 @@
 package com.cts.model;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -12,12 +10,8 @@ public class Kids {
 	private String kidsName;
 	private int kidsAge;
 	
-	//@Autowired
-	//@Qualifier("home2")
-	@Resource(name="home1")
-	//resource - for specifying the particular bean.
-	//autowired - automatically connects the bean.
-	//if more than one bean present then we have to use qualifier to mention which bean is to be selected.
+	@Autowired
+	@Qualifier("home2")
 	private Home home;
 	
 	public Home getHome() {

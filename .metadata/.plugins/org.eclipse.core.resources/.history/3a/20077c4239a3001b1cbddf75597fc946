@@ -14,10 +14,7 @@ public class Kids {
 	
 	//@Autowired
 	//@Qualifier("home2")
-	@Resource(name="home1")
-	//resource - for specifying the particular bean.
-	//autowired - automatically connects the bean.
-	//if more than one bean present then we have to use qualifier to mention which bean is to be selected.
+	//@Resource(name="home1")
 	private Home home;
 	
 	public Home getHome() {
