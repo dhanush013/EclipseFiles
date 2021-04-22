@@ -29,7 +29,6 @@ public class Appconfig {
 	@Lazy
 	
 	
-	
 	public Student getStudentBean() {
 		Student student= new Student();
 		
