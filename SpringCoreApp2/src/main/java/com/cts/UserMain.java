@@ -24,9 +24,6 @@ public class UserMain {
 		
 		User user1= applicationContext.getBean(User.class);
 		
-		
-		
-		
 		System.out.println(user1.getUserId());
 		System.out.println(user1.getUserName());
 		System.out.println(user1.getUserSalary());
