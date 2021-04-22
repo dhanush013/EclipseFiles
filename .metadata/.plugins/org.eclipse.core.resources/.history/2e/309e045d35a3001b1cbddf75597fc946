@@ -39,13 +39,13 @@
 	<property name="kidsAge" value="3"></property>
 </bean>
 
-<bean id="home1" class="com.cts.model.Home">
+<bean id="home" class="com.cts.model.Home">
 	<property name="homeId" value="7"></property>
 	<property name="homeName" value="Happy Home"></property>
 	<property name="homeLocation" value="Delhi"></property>
 </bean>
 
-<bean id="home2" class="com.cts.model.Home">
+<bean id="home1" class="com.cts.model.Home">
 	<property name="homeId" value="17"></property>
 	<property name="homeName" value="My Happy Home"></property>
 	<property name="homeLocation" value="Delhi"></property>

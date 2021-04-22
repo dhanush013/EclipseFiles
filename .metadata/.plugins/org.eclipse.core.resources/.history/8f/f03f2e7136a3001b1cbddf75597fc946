@@ -11,7 +11,7 @@ public class Kids {
 	private int kidsAge;
 	
 	@Autowired
-	@Qualifier("home2")
+	@Qualifier
 	private Home home;
 	
 	public Home getHome() {
