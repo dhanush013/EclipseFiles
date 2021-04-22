@@ -1,9 +1,0 @@
-package com.cts.model;
-
-public class Kids {
-	
-	private int kidsId;
-	private String kidsName;
-	private int kidsAge;
-
-}

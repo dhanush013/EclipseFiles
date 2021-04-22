@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\SpringCoreApp2"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\trial"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse-workspace"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\MavenApp1\pom.xml"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\Corejava\src\com\cts\regex\RegexEx1.java"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\Corejava"/>
@@ -46,6 +49,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="12"/>
+			<item value="com"/>
 			<item value="com.cts"/>
 			<item value="com.abc"/>
 			<item value="cts.com"/>
@@ -53,6 +58,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="123123"/>
+			<item value="12"/>
+			<item value="trial"/>
+			<item value="SpringCoreApp2"/>
 			<item value="SpringCoreApp1"/>
 			<item value="MavenApp2"/>
 			<item value="MavenApp1"/>
