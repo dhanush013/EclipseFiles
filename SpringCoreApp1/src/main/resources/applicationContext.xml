@@ -10,6 +10,11 @@
 
 <!-- Add this for Annotations. i,e @Required, @Autowired etc --> 
 <context:annotation-config></context:annotation-config> 
+<!--Add this for component scan  -->
+<context:component-scan base-package="com.cts.model">
+
+</context:component-scan>
+
 
 <bean id="fruit" class="com.cts.model.Fruits" >
 <property name="fruitsId" value="10001" ></property>
@@ -33,7 +38,7 @@
 	</property>
 </bean>
 
-<bean id="kid" class="com.cts.model.Kids">
+<bean id="kid" class="com.cts.model.Kids" lazy-init="true">
 	<property name="kidsId" value="76677"></property>
 	<property name="kidsName" value="Babu"></property>
 	<property name="kidsAge" value="3"></property>
@@ -45,12 +50,13 @@
 	<property name="homeLocation" value="Delhi"></property>
 </bean>
 
-<bean id="home2" class="com.cts.model.Home">
+<!--  Commented because to make it work for inject and autowired -->
+<!-- <bean id="home2" class="com.cts.model.Home">
 	<property name="homeId" value="17"></property>
 	<property name="homeName" value="My Happy Home"></property>
 	<property name="homeLocation" value="Delhi"></property>
 </bean>
-
+ -->
       
         
 
