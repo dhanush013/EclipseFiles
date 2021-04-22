@@ -15,7 +15,6 @@ public class KidsMain {
 		System.out.println(k.getKidsId());
 		System.out.println(k.getKidsName());
 		System.out.println(k.getKidsAge());
-		
 	}
 
 }

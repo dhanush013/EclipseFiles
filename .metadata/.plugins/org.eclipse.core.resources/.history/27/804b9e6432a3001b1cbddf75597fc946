@@ -1,6 +1,5 @@
 package com.cts.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Kids {
@@ -8,9 +7,6 @@ public class Kids {
 	private int kidsId;
 	private String kidsName;
 	private int kidsAge;
-	
-	@Autowired
-	private Home home;
 	
 	public int getKidsId() {
 		return kidsId;
