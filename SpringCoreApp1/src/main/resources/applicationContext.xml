@@ -28,7 +28,15 @@
 	<property name="basename">
 		<value>messages</value>
 	</property>
-</bean>       
+</bean>
+
+<bean id="kid" class="com.cts.model.Kids">
+	<property name="kidsId" value="76677"></property>
+	<property name="kidsName" value="Babu"></property>
+	<property name="kidsAge" value="3"></property>
+</bean>
+
+<context:annotation-config></context:annotation-config>       
         
 
 
