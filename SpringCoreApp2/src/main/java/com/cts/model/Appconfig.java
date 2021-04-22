@@ -13,6 +13,7 @@ public class Appconfig {
 	@Scope("prototype") //-- to get different values.
 	//@Scope("singleton")  // to get the same values.
 	@Lazy
+	
 	public User getUserBean() {
 		User user=new User(); 
 		
@@ -26,6 +27,7 @@ public class Appconfig {
 	@Bean
 	@Scope("singleton")
 	@Lazy
+	
 	public Student getStudentBean() {
 		Student student= new Student();
 		
