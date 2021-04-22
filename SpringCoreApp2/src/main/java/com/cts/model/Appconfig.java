@@ -28,7 +28,6 @@ public class Appconfig {
 	@Scope("singleton")
 	@Lazy
 	
-	
 	public Student getStudentBean() {
 		Student student= new Student();
 		
