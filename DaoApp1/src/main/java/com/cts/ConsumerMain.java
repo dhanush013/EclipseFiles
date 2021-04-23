@@ -34,7 +34,8 @@ public class ConsumerMain {
 					Consumer consumer1 = new Consumer();
 					System.out.println("Enter Id to Search");
 					consumer1.setId(scanner.nextInt());
-					Consumer consumer2 =  dao.searchConsumer(consumer1);
+					Consumer consumer2=null;
+					consumer2 =  dao.searchConsumer(consumer1);
 					
 					if(consumer2==null)
 						System.out.println("Consumer Not Found");
