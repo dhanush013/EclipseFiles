@@ -37,6 +37,7 @@ public class ConsumerDao {
 			consumer.setName(resultSet.getString(2));
 			consumer.setSalary(resultSet.getFloat(3));
 			consumer.setDob(resultSet.getDate(4));
+			consumerList.add(consumer);
 				
 			
 		}
