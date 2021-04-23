@@ -25,6 +25,23 @@ public class ConsumerDao {
 		
 	}
 	
+	public Consumer searchConsumer(Consumer consumer) throws SQLException{
+		preparedStatement= connection.prepareStatement("select * from consumer where id=?");
+		preparedStatement.setInt(1, consumer.getId());
+		resultSet = preparedStatement.executeQuery();
+		if(resultSet.next()) {
+			consumer=null;
+			consumer=new Consumer();
+			consumer.setId(resultSet.getInt(1));
+			consumer.setName(resultSet.getString(2));
+			consumer.setSalary(resultSet.getFloat(3));
+			consumer.setDob(resultSet.getDate(4));
+			
+		}
+		return consumer;
+		
+	}
+	
 	public List<Consumer> getAllConsumer() throws SQLException {
 		statement=connection.createStatement();
 		resultSet= statement.executeQuery("select * from consumer");
