@@ -12,6 +12,14 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\SpringAopDemo\SpringAopDemo"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\EBanking\EBanking"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\EZEE Transport\EEZEETransport"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\Customer-Address Inner Bean\CustomerInnerBean"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\DBConfig-SetterBasedInjection\DBConfig"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\Customer-Address-Scope"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\Customer-Address-Scope\Scope-Customer"/>
+			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\CurrencyConverter-Collections"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse-workspace\SpringCoreApp1"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\EMPapprsSys"/>

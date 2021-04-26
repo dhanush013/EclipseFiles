@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import com.cts.dao.ConsumerDao;
 import com.cts.model.Consumer;
+import com.cts.util.ApplicationUtil;
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
 public class ConsumerMain {
 	
@@ -27,11 +29,68 @@ public class ConsumerMain {
 				System.out.println("4.Update Record");
 				System.out.println("5.Show All Record");
 				int op=scanner.nextInt();
+				Consumer consumer1=null;
 			
 				switch (op) {
 				
+				case 1:
+					consumer1=null;
+					consumer1=new Consumer();
+					System.out.println("Enter Values to Add");
+					System.out.println("Enter Id");
+					consumer1.setId(scanner.nextInt());
+					
+					System.out.println("Enter Name");
+					scanner.nextLine();
+					consumer1.setName(scanner.nextLine());
+					
+					System.out.println("Enter Salary");
+					consumer1.setSalary(scanner.nextFloat());
+					
+					System.out.println("Enter DOB in dd-MM-yyyy");
+					String string=scanner.next();
+					
+					try {
+						consumer1.setDob(ApplicationUtil.checkDateFormat(string));
+					} catch (java.text.ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Consumer addConsumer= dao.addConsumer(consumer1);
+					
+					if(addConsumer!=null){
+						System.out.println("Record added with values ");
+						//Consumer addConsumer = dao.addConsumer(consumer1);
+						System.out.println(addConsumer.getId()+" "+addConsumer.getName()+" "+addConsumer.getSalary()+" "+addConsumer.getDob());
+						
+					}else
+						System.out.println("Record already present");
+					
+					break;
+				
+				case 2:
+					
+					consumer1 = null;
+					consumer1 = new Consumer();
+					System.out.println("Enter id");
+					consumer1.setId(scanner.nextInt());
+					
+					Consumer deleteConsumer = dao.deleteConsumer(consumer1);
+					
+					if(deleteConsumer !=null) {
+						System.out.println("Record Deleted with values ");
+						//Consumer addConsumer = dao.addConsumer(consumer1);
+						System.out.println(deleteConsumer.getId()+" "+deleteConsumer.getName()+" "+deleteConsumer.getSalary()+" "+deleteConsumer.getDob());
+						
+					}else
+						System.out.println("Record not deleted");
+					
+					break;
+					
+				
 				case 3:
-					Consumer consumer1 = new Consumer();
+					consumer1 = null;
+					consumer1 = new Consumer();
 					System.out.println("Enter Id to Search");
 					consumer1.setId(scanner.nextInt());
 					Consumer consumer2=null;
@@ -46,6 +105,42 @@ public class ConsumerMain {
 						
 					}
 					break;
+					
+				case 4:
+					consumer1=null;
+					consumer1=new Consumer();
+					
+					System.out.println("Enter the Id in which u want to update");
+					consumer1.setId(scanner.nextInt());
+					System.out.println("Enter The Updated Values");
+					System.out.println("Enter Name");
+					scanner.nextLine();
+					consumer1.setName(scanner.nextLine());
+					
+					System.out.println("Enter Salary");
+					consumer1.setSalary(scanner.nextFloat());
+					
+					System.out.println("Enter DOB in dd-MM-yyyy");
+					String string1=scanner.next();
+					
+					try {
+						consumer1.setDob(ApplicationUtil.checkDateFormat(string1));
+					} catch (java.text.ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Consumer updateConsumer= dao.updateConsumer(consumer1);
+					
+					if(updateConsumer!=null){
+						System.out.println("Record updated with values ");
+						//Consumer addConsumer = dao.addConsumer(consumer1);
+						System.out.println(updateConsumer.getId()+" "+updateConsumer.getName()+" "+updateConsumer.getSalary()+" "+updateConsumer.getDob());
+						
+					}else
+						System.out.println("Record not already present");
+					
+					break;
+					
 				
 				case 5:
 				
@@ -64,6 +159,8 @@ public class ConsumerMain {
 			
 		}catch (SQLException e) {
 			System.out.println(e.getMessage());
+		}catch(ParseException e) {
+			System.out.println("Date not in the Given Format");
 		}
 		
 		
