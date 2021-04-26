@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.cts.util.ApplicationUtil;
 import com.cts.util.DbConnectionManager;
+import com.cts.exception.ConsumerException;
 import com.cts.model.Consumer;
 
 public class ConsumerDao {
@@ -26,7 +27,7 @@ public class ConsumerDao {
 		
 	}
 	
-	public Consumer searchConsumer(Consumer consumer) throws SQLException{
+	public Consumer searchConsumer(Consumer consumer) throws SQLException, ConsumerException{
 		preparedStatement= connection.prepareStatement("select * from consumer where id=?");
 		preparedStatement.setInt(1, consumer.getId());
 		resultSet=null;
@@ -39,13 +40,15 @@ public class ConsumerDao {
 			consumer.setName(resultSet.getString(2));
 			consumer.setSalary(resultSet.getFloat(3));
 			consumer.setDob(resultSet.getDate(4));
-			
+
+			return consumer;
 		}
-		return consumer;
+		else
+			throw new ConsumerException("Consumer Not Found");
 		
 	}
 	
-	public Consumer addConsumer(Consumer consumer) throws SQLException{
+	public Consumer addConsumer(Consumer consumer) throws SQLException, ConsumerException{
 		
 		Consumer consumer2 = searchConsumer(consumer);
 		if(consumer2==null) {
@@ -63,12 +66,12 @@ public class ConsumerDao {
 			return consumer;
 		}
 		else {
-			return null;
+			throw new ConsumerException("Consumer Already Present");
 		}
 		
 	}
 	
-	public Consumer updateConsumer(Consumer consumer) throws SQLException{
+	public Consumer updateConsumer(Consumer consumer) throws SQLException, ConsumerException{
 		
 		Consumer consumer2 = searchConsumer(consumer);
 		if(consumer2!=null) {
@@ -86,12 +89,12 @@ public class ConsumerDao {
 			return consumer;
 		}
 		else {
-			return null;
+			throw new ConsumerException("Consumer Doesnot Exist");
 		}
 		
 	}
 	
-	public Consumer deleteConsumer(Consumer consumer) throws SQLException{
+	public Consumer deleteConsumer(Consumer consumer) throws SQLException, ConsumerException{
 		
 		Consumer consumer2 = searchConsumer(consumer);
 		if(consumer2!=null) {
@@ -105,13 +108,13 @@ public class ConsumerDao {
 			return consumer2;
 		}
 		else {
-			return null;
+			throw new ConsumerException("Consumer Not Found");
 		}
 		
 	}
 	
 	
-	public List<Consumer> getAllConsumer() throws SQLException {
+	public List<Consumer> getAllConsumer() throws SQLException, ConsumerException {
 		statement=connection.createStatement();
 		resultSet= statement.executeQuery("select * from consumer");
 		consumerList=new ArrayList<Consumer>();
@@ -127,7 +130,10 @@ public class ConsumerDao {
 				
 			
 		}
+		if(consumerList.size()>=1)
 		return consumerList;
+		else
+			throw new ConsumerException("Consumer List is Empty");
 	}
 	
 
