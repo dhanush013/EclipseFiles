@@ -1,0 +1,6 @@
+create table  consumer(id int primary key, name varchar(20), salary float (10,2), person_dob date);
+
+insert into  consumer values (1001,'suresh kumar',12000,'2000-10-01');
+insert into  consumer values (1002,'umesh kumar',14000,'2000-11-02');
+insert into  consumer values (1003,'ramesh kumar',18000,'2000-12-10');
+insert into  consumer values (1004,'jailesh kumar',20000,'2000-01-21');
