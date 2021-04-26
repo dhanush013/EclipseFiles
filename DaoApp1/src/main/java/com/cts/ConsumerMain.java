@@ -5,8 +5,10 @@ import java.util.Optional;
 import java.util.Scanner;
 
 import com.cts.dao.ConsumerDao;
+import com.cts.exception.ConsumerException;
 import com.cts.model.Consumer;
 import com.cts.util.ApplicationUtil;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
 public class ConsumerMain {
@@ -56,6 +58,7 @@ public class ConsumerMain {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					try {
 					Consumer addConsumer= dao.addConsumer(consumer1);
 					
 					if(addConsumer!=null){
@@ -63,9 +66,13 @@ public class ConsumerMain {
 						//Consumer addConsumer = dao.addConsumer(consumer1);
 						System.out.println(addConsumer.getId()+" "+addConsumer.getName()+" "+addConsumer.getSalary()+" "+addConsumer.getDob());
 						
-					}else
-						System.out.println("Record already present");
-					
+					} 
+					}catch(ConsumerException e) {
+						System.err.println(e.getMessage());
+					}
+					/*
+						 * else System.out.println("Record already present");
+						 */
 					break;
 				
 				case 2:
@@ -75,6 +82,7 @@ public class ConsumerMain {
 					System.out.println("Enter id");
 					consumer1.setId(scanner.nextInt());
 					
+					try {
 					Consumer deleteConsumer = dao.deleteConsumer(consumer1);
 					
 					if(deleteConsumer !=null) {
@@ -82,8 +90,14 @@ public class ConsumerMain {
 						//Consumer addConsumer = dao.addConsumer(consumer1);
 						System.out.println(deleteConsumer.getId()+" "+deleteConsumer.getName()+" "+deleteConsumer.getSalary()+" "+deleteConsumer.getDob());
 						
-					}else
-						System.out.println("Record not deleted");
+					}
+					}catch(ConsumerException e){
+						System.err.println(e.getMessage());
+					}
+					/*else
+					 	*	System.out.println("Record not deleted");
+					*/
+					
 					
 					break;
 					
@@ -94,14 +108,20 @@ public class ConsumerMain {
 					System.out.println("Enter Id to Search");
 					consumer1.setId(scanner.nextInt());
 					Consumer consumer2=null;
+					try {
 					consumer2 =  dao.searchConsumer(consumer1);
 					
-					if(consumer2==null)
+					/*if(consumer2==null)
 						System.out.println("Consumer Not Found");
-					else
+					*/
+					if(consumer2!=null)
 					{
 						System.out.println("Consumer Found");
 						System.out.println(consumer2.getId()+" "+consumer2.getName()+" "+consumer2.getSalary()+" "+consumer2.getDob());
+						
+					}
+					}catch(ConsumerException e) {
+						System.err.println(e.getMessage());
 						
 					}
 					break;
@@ -129,6 +149,7 @@ public class ConsumerMain {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					try {
 					Consumer updateConsumer= dao.updateConsumer(consumer1);
 					
 					if(updateConsumer!=null){
@@ -136,17 +157,24 @@ public class ConsumerMain {
 						//Consumer addConsumer = dao.addConsumer(consumer1);
 						System.out.println(updateConsumer.getId()+" "+updateConsumer.getName()+" "+updateConsumer.getSalary()+" "+updateConsumer.getDob());
 						
-					}else
+					}
+					}catch(ConsumerException e){
+						System.err.println(e.getMessage());
+					}
+					/*else
 						System.out.println("Record not already present");
-					
+					*/
 					break;
 					
 				
 				case 5:
+					try {
 				
 					for(Consumer consumer: dao.getAllConsumer())
 						System.out.println(consumer.getId()+" "+consumer.getName()+" "+consumer.getSalary()+" "+consumer.getDob());
-				
+					}catch(ConsumerException e) {
+						System.err.println(e.getMessage());
+					}
 					break;
 
 				default:
