@@ -12,10 +12,10 @@
 	</bean>
 	
 	<bean id="datasource2" class="org.springframework.jdbc.core.JdbcTemplate" >
-		<property name="data source" ref="datasource1"></property>
+		<property name="dataSource" ref="datasource1"></property>
 	</bean>
 	
-	<bean id="datasource3" class="cts.com.dao.CustomerDao" >
+	<bean id="dao" class="cts.com.dao.CustomerDao" >
 		<property name="jdbcTemplate" ref="datasource2" ></property>
 		
 	</bean>
