@@ -22,5 +22,7 @@ public class CustomerDao {
 	public int addCustomer(Customer customer) throws SQLIntegrityConstraintViolationException {
 		return jdbcTemplate.update("insert into customer values(?,?,?)",customer.getCustomerId(),customer.getCustomerName(),customer.getCustomerLocation());
 	}
+	
+	//public List<Customer >
 
 }

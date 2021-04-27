@@ -9451,3 +9451,9 @@ org.eclipse.core.runtime.CoreException: Launch configuration BillingSoftwareAppl
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-27 11:00:38.217
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-27 11:02:48.083
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-27 11:02:48.085
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
