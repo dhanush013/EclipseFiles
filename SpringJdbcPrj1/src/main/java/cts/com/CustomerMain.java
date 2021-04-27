@@ -18,7 +18,7 @@ public class CustomerMain {
 		CustomerDao dao = ctx.getBean("dao", CustomerDao.class);
 		Scanner scanner = new Scanner(System.in);
 		// snippet for add values to table
-		/*
+		
 		System.out.println("Enter The Customer Id Name and Location");
 		Customer customer=new Customer();
 		customer.setCustomerId(scanner.nextInt());
@@ -32,15 +32,15 @@ public class CustomerMain {
 		}catch( SQLIntegrityConstraintViolationException|DuplicateKeyException e) {
 			System.out.println(e.getMessage());
 		}
-		*/
+		
 		// snippet to get all customer values
-		/*
+		
 		dao.getAllCustomer().forEach(a->System.out.println(a.getCustomerId()+" "+a.getCustomerName()+" "+a.getCustomerLocation()));
-		*/
+		
 		// snippet for search values in customer using customer id
 		
 		System.out.println("Enter id to scan");
-		Customer customer=null;
+		//Customer customer=null;
 		customer=new Customer();
 		customer.setCustomerId(scanner.nextInt());
 		Customer searchCustomer = dao.searchCustomer(customer);
@@ -50,6 +50,37 @@ public class CustomerMain {
 			System.out.println("Found With Given Values");
 			System.out.println(searchCustomer.getCustomerId()+" "+searchCustomer.getCustomerName()+" "+searchCustomer.getCustomerLocation());
 			
+		}
+		
+		// snippet for delete
+		
+		System.out.println("Enter id to Delete");
+		customer = new Customer();
+		customer.setCustomerId(scanner.nextInt());
+		int res=dao.deleteCustomer(customer);
+		if(res==0)
+			System.out.println("Customer Not Presesnt");
+		else {
+			System.out.println("Customer Deleted");	
+		}
+		//snippet for update
+		System.out.println("Enter The Customer Id");
+
+		System.out.println("and Enter updated Name and Location");
+		customer=new Customer();
+		customer.setCustomerId(scanner.nextInt());
+		scanner.nextLine();
+		customer.setCustomerName(scanner.nextLine());
+		customer.setCustomerLocation(scanner.next());
+		
+		try {
+		int res1 = dao.updateCustomer(customer);
+		if(res1==0)
+			System.out.println("Customer not present");
+		else
+			System.out.println("Customer Updated");
+		}catch( SQLIntegrityConstraintViolationException|DuplicateKeyException e) {
+			System.out.println(e.getMessage());
 		}
 		
 		scanner.close();
