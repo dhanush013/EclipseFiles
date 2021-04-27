@@ -17,8 +17,9 @@ public class CustomerMain {
 		ApplicationContext ctx= new ClassPathXmlApplicationContext("beans.xml");
 		CustomerDao dao = ctx.getBean("dao", CustomerDao.class);
 		Scanner scanner = new Scanner(System.in);
+		// snippet for add values to table
+		/*
 		System.out.println("Enter The Customer Id Name and Location");
-		
 		Customer customer=new Customer();
 		customer.setCustomerId(scanner.nextInt());
 		scanner.nextLine();
@@ -31,7 +32,28 @@ public class CustomerMain {
 		}catch( SQLIntegrityConstraintViolationException|DuplicateKeyException e) {
 			System.out.println(e.getMessage());
 		}
+		*/
+		// snippet to get all customer values
+		/*
+		dao.getAllCustomer().forEach(a->System.out.println(a.getCustomerId()+" "+a.getCustomerName()+" "+a.getCustomerLocation()));
+		*/
+		// snippet for search values in customer using customer id
+		
+		System.out.println("Enter id to scan");
+		Customer customer=null;
+		customer=new Customer();
+		customer.setCustomerId(scanner.nextInt());
+		Customer searchCustomer = dao.searchCustomer(customer);
+		if(searchCustomer==null)
+			System.out.println("Customer Not Present");
+		else {
+			System.out.println("Found With Given Values");
+			System.out.println(searchCustomer.getCustomerId()+" "+searchCustomer.getCustomerName()+" "+searchCustomer.getCustomerLocation());
+			
+		}
+		
 		scanner.close();
+		
 		
 	}
 
