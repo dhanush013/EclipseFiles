@@ -18,7 +18,6 @@
 	<bean id="datasource3" class="cts.com.dao.CustomerDao" >
 		<property name="jdbcTemplate" ref="datasource2" ></property>
 		
-		
 	</bean>
 	     
 </beans>
