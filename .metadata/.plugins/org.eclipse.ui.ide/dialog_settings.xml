@@ -12,6 +12,15 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 2\5_6132016231173063516\Insurance\insurance"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 2\1Lkzxv_WpllTl9xK6qn4qb_JrdIkBk3qa(1)\1Lkzxv_WpllTl9xK6qn4qb_JrdIkBk3qa\Insurance\insurance"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 1\Postal Answers\postal\PostalFinal"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 1\EMPapprsSys\ICT\Empsys"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 1\Postal Answers\postal-tr"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\Check\CC\SPRING CC Answers\sb"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\Check\CC\SPRING CC Answers\sb\StationaryBill11"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\Check\CC\SPRING CC Answers\StationaryBill"/>
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\Check\CC\StationaryBill"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\Billing Software Application\ProductBillingApplication"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\Passport Service\PassportService"/>
 			<item value="C:\Users\Dhanush Kumar\eclipse\java-2021-03\eclipse\Tekstac\EngineAnalysis"/>
@@ -35,6 +44,14 @@
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\EMPapprsSys\ICT\ICT"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\New folder"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\ict\PostalDeptMgmtSystemSkel"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="274"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
 </section>

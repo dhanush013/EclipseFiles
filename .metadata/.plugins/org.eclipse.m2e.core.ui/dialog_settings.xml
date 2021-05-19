@@ -50,8 +50,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.cts"/>
 			<item value="cts.com"/>
+			<item value="com.cts"/>
 			<item value="com.springcore"/>
 			<item value="java"/>
 			<item value="121"/>
@@ -62,6 +62,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="junitapp1"/>
 			<item value="SpringJdbcPrj1"/>
 			<item value="DaoApp1"/>
 			<item value="constructorinjection"/>
