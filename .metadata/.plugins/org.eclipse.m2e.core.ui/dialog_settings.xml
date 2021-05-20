@@ -20,6 +20,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -50,8 +51,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="cts.com"/>
 			<item value="com.cts"/>
+			<item value="cts.com"/>
 			<item value="com.springcore"/>
 			<item value="java"/>
 			<item value="121"/>
@@ -62,6 +63,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="SpringBootMvcApp2"/>
 			<item value="junitapp1"/>
 			<item value="SpringJdbcPrj1"/>
 			<item value="DaoApp1"/>
