@@ -51,6 +51,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.ev"/>
 			<item value="com.cts"/>
 			<item value="cts.com"/>
 			<item value="com.springcore"/>

@@ -1,9 +1,15 @@
 package com.cts.model;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class Product {
 	
+	@NotNull(message = "Product ID is Null")
 	private Integer prdId;
+	@NotEmpty(message = "Product Name is empty")
 	private String prdName;
+	@NotNull(message = "Product Cost is blank")
 	private Float cost;
 	
 	public Integer getPrdId() {
