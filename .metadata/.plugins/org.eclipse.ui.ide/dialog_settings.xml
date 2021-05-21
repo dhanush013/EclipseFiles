@@ -12,6 +12,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\Check\CC\5_6129891717010162275\ShoppingApplication"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 2\5_6132016231173063516\Insurance\insurance"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 2\1Lkzxv_WpllTl9xK6qn4qb_JrdIkBk3qa(1)\1Lkzxv_WpllTl9xK6qn4qb_JrdIkBk3qa\Insurance\insurance"/>
 			<item value="C:\Users\Dhanush Kumar\Desktop\Whatsapp Downloads\CTS\ICT\ICT1 - attempt 1\Postal Answers\postal\PostalFinal"/>
@@ -47,7 +48,7 @@
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_X_ORIGIN" value="269"/>
 		<item key="DIALOG_Y_ORIGIN" value="274"/>
 	</section>
 	<section name="WORKBENCH_SETTINGS">
