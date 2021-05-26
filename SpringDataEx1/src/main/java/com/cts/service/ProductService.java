@@ -27,6 +27,17 @@ public class ProductService {
 			return null;
 	}
 	
+	public Product deleteProduct(int id) {
+		Optional<Product> findById = productRepository.findById(id);
+		if(findById.isPresent()) {
+			Product p1 = findById.get();
+			productRepository.deleteById(id);
+			return  p1;
+		}
+		else
+			return null;
+	}
+	
 	public List<Product> getAllProduct(){
 		return productRepository.findAll();
 	}
