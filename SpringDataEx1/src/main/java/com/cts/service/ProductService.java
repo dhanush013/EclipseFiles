@@ -1,6 +1,7 @@
 package com.cts.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,14 @@ public class ProductService {
 	
 	public Product addProduct(Product prd) {
 		return productRepository.save(prd);
+	}
+	
+	public Product findProduct(int id) {
+		Optional<Product> findById = productRepository.findById(id);
+		if(findById.isPresent())
+			return findById.get();
+		else
+			return null;
 	}
 	
 	public List<Product> getAllProduct(){
